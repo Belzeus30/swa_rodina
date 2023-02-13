@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<link rel="stylesheet" href="styles/style.css">
+<head>
+	<meta charset="UTF-8"/>	
+	<title>SWA</title>
+</head>
+<body>
+	<h1>Rodina projekt</h1>
+	<div class="inputbox">
+		<div class="column middle"> 
+			<div class="form-popup" id="myForm">
+				<form  class="form-container" method="post" >
+					<h1 id="zapis" >Příjmy</h1>
+					<label for="input_lang"><b>Plat dohromady</b></label>
+					<input id="input_lang" type="text" placeholder="30000" name="input_lang" required>
+					<label for="input_time"><b>Pasivní příjem </b></label>
+					<input id="input_time"type="text"  name="input_time" >
+					<h1 id="zapis">Výdaje</h1>
+					<h3 >Nezbytné</h3>
+					<label for="input_rate"><b>Nájem/Daň z nemovitosti</b></label>
+					<input id="input_rate" type="text"  name="input_rate" required>
+					<label for="input_rate"><b>Ostatní</b></label>
+					<input id="input_rate" type="text"  name="input_rate" required>
+					<label for="input_word"><b>Zbytné</b></label>
+					<input id="input_word" type="text" name="input_word" required>
+					<button class = "button" onclick="openForm()" type="button">
+						Kalkulace
+					</button> 
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
