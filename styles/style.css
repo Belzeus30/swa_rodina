@@ -17,7 +17,7 @@ h1{ color: black;
 }
 body
 {
-  background-image:url(https://4kwallpapers.com/images/wallpapers/gradient-background-backdrop-multicolor-colorful-vibrant-2880x1800-6723.png);
+  background-color:gray;
   background-size: 100%; 
 
 }
@@ -65,10 +65,6 @@ form-popup {
   background-color: #c0c0c0;
   outline: none;
 }
-.date-inp::-webkit-calendar-picker-indicator {
-  padding-left: 450px;
-  border: none;
-}
 
 /* Set a style for the submit/login button */
 .form-container .btn {
@@ -108,5 +104,57 @@ form-popup {
 	display: flex;
 	justify-content: center;
 }
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
 
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: 600px;
+  margin-bottom: 400px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent ;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 
