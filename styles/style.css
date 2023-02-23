@@ -48,7 +48,7 @@ form-popup {
 .form-container {
   
   padding: 10px;
-  background-color: #A6C6FF;
+  background-color: #FFC059;
 }
 
 /* Full-width input fields */
@@ -57,12 +57,12 @@ form-popup {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #dcdcdc;
+  background: white;
 }
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=date]:focus {
-  background-color: #c0c0c0;
+  background-color: #dcdcdc;
   outline: none;
 }
 
@@ -96,8 +96,7 @@ form-popup {
   text-align: center;
   width: 50%;
 }
-/* Popup container */
-{box-sizing: border-box;}
+
 
 .inputbox {
 	align-items: center;
@@ -115,6 +114,7 @@ form-popup {
 .popup .popuptext {
   visibility: hidden;
   width: 400px;
+  height: 400px;
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -123,22 +123,11 @@ form-popup {
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 50%;
-  margin-left: 600px;
+  margin-left: 750px;
   margin-bottom: 400px;
 }
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent ;
-}
+
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
