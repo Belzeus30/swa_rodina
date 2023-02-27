@@ -10,55 +10,73 @@
 	<div class="inputbox">
 		<div class="column middle"> 
 			<div class="form-popup" id="myForm">
-				<form  class="form-container" method="post" onsubmit="return myFunction()">
+				<form  class="form-container" method="" onsubmit="return myFunction();">
 					<h1 id="zapis" >Příjmy</h1>
-					<label for="input_1plat">
-						<b>
-							1.Plat
-						</b>
-					</label>
-					<input id="input_1plat" type="text"  name="plat" required>
-					<label for="input_2plat">
-						<b>
-							2.Plat
-						</b>
-					</label>
-					<input id="input_2plat"type="text"   name="input_time" >
-					<label for="input_pPrijem">
-						<b>
-							Pasivní příjem 
-						</b>
-					</label>
-					<input id="input_pPrijem"type="text"  name="input_time">
-					<label for="input_jednoPrijem">
-						<b>
-							Jednorázový příjem 
-						</b>
-					</label>
-					<input id="input_jednoPrijem"type="text"  name="input_time">	
+					<table>
+						<tr>
+							<td>Plat</td>
+							<td>2. plat</td>
+							<td>Jednorázové příjmy</td>
+							<td>Investice</td>
+						</tr>
+						<tr>
+							<td><input type="text" name="plat" required></td>
+							<td><input type="text" name="2plat"></td>
+							<td><input type="text" name="jedno_prijem"></td>
+							<td><input type="text" name="investice"></td>
+						</tr>
+					</table>
 					<h1 id="zapis">
 						Výdaje
 					</h1>
 					<h3 >Nezbytné</h3>
-					<label for="input_najem">
-						<b>
-							Nájem/Daň z nemovitosti
-						</b>
-					</label>
-					<input id="input_najem" type="text"  name="input_rate" required>
-					<label for="input_inkaso">
-						<b>
-							Voda+Elektřina
-						</b>
-					</label>
-					<input id="input_inkaso" type="text"  name="input_rate" required>
-					<label for="input_zbytne">
-						<b>
+					<table>
+						<tr>
+							<td>Nájem/Daň</td>
+							<td>Voda+Elektřina</td>
+							<td>Jídlo</td>
+							<td>Telekomunikace</td>
+						</tr>
+						<tr>
+							<td><input type="text" name="najem"></td>
+							<td><input type="text" name="inkaso"></td>
+							<td><input type="text" name="jidlo"></td>
+							<td><input type="text" name="telekomunikace"></td>
+						</tr>
+					</table>
+						<h3>
 							Zbytné
-						</b>
-					</label>
-					<input id="input_zbytne" type="text" name="input_word" >
-					<input type="submit" >
+						</h3>
+						<table>
+							<tr>
+								<td>Koníčky</td>
+								<td>Výlety+Zábava+dárky</td>
+								<td>Vzdělání</td>
+							</tr>
+							<tr>
+								<td><input type="text" name="konicky"></td>
+								<td><input type="text" name="vylety"></td>
+								<td><input type="text" name="vzdelani"></td>
+							</tr>
+						</table>
+					<h1 id="zapis">
+						Dluhy
+					</h1>
+					<table>
+						<tr>
+							<td>Kreditka-celkový dluh</td>
+							<td>Kreditka-splátka</td>
+							<td>Hypotéka-celkem</td>
+							<td>Hypotéka-splátka</td>
+						</tr>
+						<tr>
+							<td><input type="text" name="kcelkem"></td>
+							<td><input type="text" name="ksplatka"></td>
+							<td><input type="text" name="hcelkem"></td>
+							<td><input type="text" name="hsplatka"></td>
+						</tr>
+					</table>
+					<input type="submit" class="button" onclick="Event.preventDefault()">
 				</form>
 			</div>
 		</div>
@@ -80,21 +98,31 @@
 <script>
 // When the user clicks on <div>, open the popup
 function myFunction() {
+	Event.preventDefault()
 	let popup = document.getElementById("myPopup");
 	popup.classList.toggle("show");
+	Debug.Log("yes");
 
 }
 function Zustatek(){
-	let a=document.getElementById("input_1plat").value;
-	let b=document.getElementById("input_2plat").value;
-	let c=document.getElementById("input_pPrijem").value;
-	let d=document.getElementById("input_jednoPrijem").value;
-	let e=document.getElementById("input_najem").value;
-	let f=document.getElementById("input_inkaso").value;
-	let g=document.getElementById("input_zbytne").value;
+	let plat_1=document.getElementById("1plat").value;
+	let plat_2=document.getElementById("2plat").value;
+	let jednoPrijem=document.getElementById("jedno_prijem").value;
+	let investice=document.getElementById("investice").value;
+	let najem=document.getElementById("najem").value;
+	let inkaso=document.getElementById("inkaso").value;
+	let jidlo=document.getElementById("jidlo").value;
+	let telekomunikace=document.getElementById("telekomunikace").value;
+	let konicky=document.getElementById("konicky").value;
+	let vylety=document.getElementById("vylety").value;
+	let vzdelani=document.getElementById("vzdelani").value;
+	let kcelkem=document.getElementById("kcelkem").value;
+	let ksplatka=document.getElementById("ksplatka").value;
+	let hcelkem=document.getElementById("hcelkem").value;
+	let hsplatka=document.getElementById("hsplátka").value;
 	let zustatek=document.getElementById('result');
-	let count1=parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)
-	let count2=parseInt(e)+parseInt(f)+parseInt(g);
+	let count1=parseInt(plat_1)+parseInt(plat_2)+parseInt(jednoPrijem)+parseInt(investice)
+	let count2=parseInt(e)+parseInt(f)+parseInt(g)+parseInt(h)+parseInt();
 	let count=count1-count2;
 	
 
