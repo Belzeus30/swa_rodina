@@ -37,15 +37,6 @@ body
 .button:active {
     background-color: #ffbf00;
 }
-form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 34%;
-  left: 34%;
-  border: 3px solid #474747;
-  z-index: 9;
-}
 
 /* Add styles to the form container */
 .form-container {
@@ -89,35 +80,39 @@ form-popup {
 }
 /* Popup container */
 .popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 400px;
-  height: 400px;
-  background-color: #555;
-  color: #fff;
   text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  margin-left: 750px;
-  margin-bottom: 400px;
+  position: fixed;
+  display: none;
+  cursor: pointer;
+  width: 32rem;
+  height: 20rem;
+  padding: 2rem;
+  background-color: gray;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto ;
+  bottom:  40%;
+  border: 0.2rem solid black;
+  border-radius: 1rem;
+}
+.popup-dluhy {  
+  display: flex;
+  justify-content: center;
+}
+.dluhy {
+  display: inline-block;
+  width: 50%;
+  margin: 0;
 }
 
+.close{
+  position: absolute;
+  right: -0rem;
+  top: -0rem;
+  background: none;
+  border: none;
 
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
 }
 
 /* Add animation (fade in the popup) */
