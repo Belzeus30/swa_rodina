@@ -125,7 +125,13 @@ if($_SERVER['REQUEST_METHOD']=='post') {
 	$hsplatka = isset($_POST['hsplatka'])? ($_POST['hsplatka']):0;
 	
 
-	
+	$prijmy=$plat1+$plat2+$jedno_prijem+$investice;
+	$vydaje=$najem+$inkaso+$jidlo+$telekomunikace;
+	$zbytne=$konicky+$vylety+$vzdelani;
+	$dluhy=$ksplatka+$hsplatka;
+	$k_dluh=$kcelkem-$ksplatka;
+	$h_dluh=$hcelkem-$hsplatka;
+	$zustatek=$prijmy-$vydaje-$zbytne-$dluhy;	
 
 
 }
