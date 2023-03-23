@@ -10,10 +10,11 @@
 
 <body>
 	<h1>Rodina projekt</h1>
+	<div class="column">
 	<div class="inputbox">
 		<div class="column middle">
 			<div class="form-popup" id="myForm">
-				<form class="form-container" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+				<form id="form" class="form-container" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" onsubmit="popup()">
 					<h1 id="zapis">Příjmy</h1>
 
 					<table>
@@ -87,15 +88,16 @@
 							<td><input type="Number" name="hsplatka"></td>
 						</tr>
 					</table>
-					<input type="submit" class="button" onclick="Open_Popup('open')">
-
-					
-
+					<input type="submit" class="button" id="submit">
 				</form>
 			</div>
 		</div>
 	</div>
-
+</div>
+<div class="column">
+<h1>ano</h1>	
+<p></p>
+</div>
 	<?php
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -123,47 +125,9 @@
 	}
 
 	?>
-	<div class="popup" id="popup">
-		<button class="close" type="submit" onclick="Close_Popup()"><img src="https://cdn3.iconfinder.com/data/icons/rounded-monosign/142/delete-512.png" alt="" width="15x" height="15px"></button>
-		<h3>Vyhodnocení</h3>
-		<div>
-			<p> Zůstatek: <?= $prijmy - $vydaje_nezbytne - $vydaje_zbytne ?></p>
-		</div>
-		<div class="popup-dluhy">
-			<div class="dluhy">
-				<h4>Dluh Kreditka</h4>
-				<p><?= "ano" ?></p>
-			</div>
-			<div class="dluhy">
-				<h4>Dluh Hypotéka</h4>
-				<p><?= "ano" ?></p>
-			</div>
-		</div>
-		<button class="button">edit</button>
-		<div>
-			<h4>Řešení</h4>
-			<?php if ($zustatek < 0) : ?>
-				<p>random řesšení</p>
-			<?php elseif ($zustatek > 0) : ?>
-				<p>random investice</p>
-			<?php endif; ?>
-		</div>
-=======
-
-	</div>
 </body>
 
-<script>
 
-	$('.form-container').on("submit" ,function() {
-		document.getElementById("popup").style.display = "block";
-	})
-	// When the user clicks on <div>, open the popup
-
-	function Close_Popup() {
-		document.getElementById("popup").style.display = "none";
-	}
-</script>
 
 
 </html>

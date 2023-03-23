@@ -1,53 +1,62 @@
-h1{ color: black; 
-	text-align: center;}
-.button {background-color: #0a0a23; 
-  border:none; 
-    border-radius:10px; 
-    padding:15px;
-    min-height:30px; 
-    min-width: 120px;;
+h1 {
+  color: black;
+  text-align: center;
+}
+
+.button {
+  background-color: #0a0a23;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+  ;
   color: #fff;
-  
+
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
- 
+
   cursor: pointer;
 }
-td{
+
+td {
   font-weight: bold;
 }
-body
-{
-  background-color:gray;
-  background-size: 100%; 
+
+body {
+  background-color: gray;
+  background-size: 100%;
 
 }
 
 .button:hover {
-	background-color:#002ead;
-      transition: 0.7s;
+  background-color: #002ead;
+  transition: 0.7s;
 }
+
 .button:focus {
-    outline-color: transparent;
-    outline-style:solid;
-    box-shadow: 0 0 0 4px #5a01a7;
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 4px #5a01a7;
 }
+
 .button:active {
-    background-color: #ffbf00;
+  background-color: #ffbf00;
 }
 
 /* Add styles to the form container */
 .form-container {
-  margin:0 2rem 0 2rem ;
+  margin: 0 2rem 0 2rem;
   padding: 10px;
   background-color: #FF9B00;
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=date] {
-  
+.form-container input[type=text],
+.form-container input[type=date] {
+
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -55,7 +64,8 @@ body
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=date]:focus {
+.form-container input[type=text]:focus,
+.form-container input[type=date]:focus {
   background-color: #dcdcdc;
   outline: none;
 }
@@ -74,10 +84,11 @@ body
 
 
 .inputbox {
-	align-items: center;
-	display: flex;
-	justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
+
 /* Popup container */
 .popup {
   text-align: center;
@@ -91,22 +102,24 @@ body
   left: 0;
   right: 0;
   margin-left: auto;
-  margin-right: auto ;
-  bottom:  40%;
+  margin-right: auto;
+  bottom: 40%;
   border: 0.2rem solid black;
   border-radius: 1rem;
 }
-.popup-dluhy {  
+
+.popup-dluhy {
   display: flex;
   justify-content: center;
 }
+
 .dluhy {
   display: inline-block;
   width: 50%;
   margin: 0;
 }
 
-.close{
+.close {
   position: absolute;
   right: -0rem;
   top: -0rem;
@@ -117,12 +130,24 @@ body
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
+.column {
+  width: fit-content;
+}
