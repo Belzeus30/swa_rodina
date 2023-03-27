@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Pon 27. bře 2023, 11:27
+-- Vytvořeno: Pon 27. bře 2023, 11:34
 -- Verze serveru: 10.1.31-MariaDB
 -- Verze PHP: 7.2.3
 
@@ -56,6 +56,16 @@ CREATE TABLE `family` (
 --
 ALTER TABLE `family`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT pro tabulky
+--
+
+--
+-- AUTO_INCREMENT pro tabulku `family`
+--
+ALTER TABLE `family`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
