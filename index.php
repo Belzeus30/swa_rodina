@@ -8,6 +8,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
+<?php
+require_once "config/init.php";
+?>
+
 <body>
 	<h1>Rodina projekt</h1>
 	<div class="column">

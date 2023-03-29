@@ -5,7 +5,7 @@
         private $db_name;
         private $username;
         private $password;
-        private $conn;
+        public $conn;
 
         public function __construct($host, $db_name, $username , $password) {
             $this->host = $host;
