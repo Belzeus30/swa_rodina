@@ -23,21 +23,21 @@
 
         private $a = array(
             "id" => &$this->id,
-            "plat_1" => & $this->plat_1,
-            "plat_2" => & $this->plat_2,
-            "jedno_prijem" => & $this->jedno_prijem,
-            "investice" => & $this->investice,
-            "najem" => & $this->najem,
-            "inkaso" => & $this->inkaso,
-            "jidlo" => & $this->jidlo,
-            "telekomunikace" => & $this->telekomunikace,
-            "konicky" => & $this->konicky,
-            "vylety" => & $this->vylety,
-            "vzdelani" => & $this->vzdelani,
-            "kcelkem" => & $this->kcelkem,
-            "ksplatka" => & $this->ksplatka,
-            "hcelkem" => & $this->hcelkem,
-            "hsplatka" => & $this->hsplatka);
+            "plat_1" => &$this->plat_1,
+            "plat_2" => &$this->plat_2,
+            "jedno_prijem" =>&$this->jedno_prijem,
+            "investice" => &$this->investice,
+            "najem" => &$this->najem,
+            "inkaso" => &$this->inkaso,
+            "jidlo" => &$this->jidlo,
+            "telekomunikace" =>&$this->telekomunikace,
+            "konicky" => &$this->konicky,
+            "vylety" => &$this->vylety,
+            "vzdelani" => &$this->vzdelani,
+            "kcelkem" => &$this->kcelkem,
+            "ksplatka" => &$this->ksplatka,
+            "hcelkem" => &$this->hcelkem,
+            "hsplatka" => &$this->hsplatka);
 
         public function __construct($db) {
             $this->conn = $db;
