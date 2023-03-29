@@ -22,25 +22,32 @@
 		public $hsplatka;
 
         private $a = array(
-            "id" => &$this->id,
-            "plat_1" => &$this->plat_1,
-            "plat_2" => &$this->plat_2,
-            "jedno_prijem" =>&$this->jedno_prijem,
-            "investice" => &$this->investice,
-            "najem" => &$this->najem,
-            "inkaso" => &$this->inkaso,
-            "jidlo" => &$this->jidlo,
-            "telekomunikace" =>&$this->telekomunikace,
-            "konicky" => &$this->konicky,
-            "vylety" => &$this->vylety,
-            "vzdelani" => &$this->vzdelani,
-            "kcelkem" => &$this->kcelkem,
-            "ksplatka" => &$this->ksplatka,
-            "hcelkem" => &$this->hcelkem,
-            "hsplatka" => &$this->hsplatka);
+            "id" => null,
+            "plat_1" => null,
+            "plat_2" => null,
+            "jedno_prijem" => null,
+            "investice" => null,
+            "najem" => null,
+            "inkaso" => null,
+            "jidlo" => null,
+            "telekomunikace" => null,
+            "konicky" => null,
+            "vylety" => null,
+            "vzdelani" => null,
+            "kcelkem" => null,
+            "ksplatka" => null,
+            "hcelkem" => null,
+            "hsplatka" => null);
+
 
         public function __construct($db) {
             $this->conn = $db;
+            $this->a["id"] =& $this->id;
+            $this->a["plat_1"] =& $this->plat_1;
+            $this->a["plat_2"] =& $this->plat_2;
+            $this->a["jedno_prijem"] =& $this->jedno_prijem;
+            $this->a["investice"] =& $this->investice;
+         
         }
 
         public function create() {
