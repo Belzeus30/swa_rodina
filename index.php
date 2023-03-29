@@ -10,7 +10,12 @@
 
 <?php
 require_once "config/init.php";
+$Family->hcelkem=5;
+var_dump($Family);
+
 ?>
+
+
 
 <body>
 	<h1>Rodina projekt</h1>
