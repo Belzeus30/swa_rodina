@@ -98,6 +98,10 @@
 				<h1 id="zapis">
 					Zůstatek
 				</h1>
+				<p>Váš zůstatek je (zustatek)</p>
+				<p>Váš dluh na kreditce činí(kdluh), Vače hypotéka činí(hdluh)</p>
+				<p>Pro úpravu přepište údaje a klikněte na tlačitko</p>
+				<p>if zustatek vetsi nez (6*(plat_1+plat_2)) then napad na investice  else if (zustatek vetsi nez 0) schov si penize, else zvedni prijmy a sniz vydaje </p>
 			</div>
 		</div>
 	</div>
