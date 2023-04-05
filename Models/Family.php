@@ -3,7 +3,7 @@
     class Family {
 
         private $conn;
-        private $table;
+        private $table = "family";
         public $id;
         public $plat_1; 
 		public $plat_2;
@@ -73,11 +73,14 @@
             foreach($this->a as $key => $val) {
                 if($key != "id") {
                     $val = htmlspecialchars($val);
-                    $stmt->bindParam(':'.$key ,$val);
+                    //$stmt->bindParam(':'.$key ,$val);
+                    $stmt->bindParam(':plat_1' ,$val);
+                    //var_dump($key,$val);
                 }
                 
+                
             }
-
+            var_dump($stmt);
             if($stmt->execute()) {
                 return true;
             }else {
@@ -162,11 +165,9 @@
         }
 
         public function get_all() {
-            $query = "SELECT * FROM ". $this->table. " WHERE id = :id";
-
+            $query = "SELECT * FROM ". $this->table;
+            var_dump($query);
             $stmt = $this->conn->prepare($query);
-
-            $stmt->bindParam(':id', $this->id);
 
             $stmt->execute();
 
