@@ -47,7 +47,17 @@
             $this->a["plat_2"] =& $this->plat_2;
             $this->a["jedno_prijem"] =& $this->jedno_prijem;
             $this->a["investice"] =& $this->investice;
-         
+            $this->a["najem"] =& $this->najem;
+            $this->a["inkaso"] =& $this->inkaso;
+            $this->a["jidlo"] =& $this->jidlo;
+            $this->a["telekomunikace"] =& $this->telekomunikace;
+            $this->a["konicky"] =& $this->konicky;
+            $this->a["vylety"] =& $this->vylety;
+            $this->a["vzdelani"] =& $this->vzdelani;
+            $this->a["kcelkem"] =& $this->kcelkem;
+            $this->a["ksplatka"] =& $this->ksplatka;
+            $this->a["hcelkem"] =& $this->hcelkem;
+            $this->a["hsplatka"] =& $this->hsplatka;         
         }
 
         public function create() {
@@ -70,17 +80,15 @@
 
             $stmt = $this->conn->prepare($query);
 
-            foreach($this->a as $key => $val) {
-                if($key != "id") {
-                    $val = htmlspecialchars($val);
-                    //$stmt->bindParam(':'.$key ,$val);
-                    $stmt->bindParam(':plat_1' ,$val);
-                    //var_dump($key,$val);
-                }
+                foreach($this->a as $key => &$val) {
+                    if($key != "id") {
+                        $val = htmlspecialchars($val);
+                        $stmt->bindParam(':'.$key ,$val);
+                    }
                 
                 
             }
-            var_dump($stmt);
+
             if($stmt->execute()) {
                 return true;
             }else {
@@ -90,41 +98,6 @@
                 return false;
             }
 
-        /*
-            $this->plat_1= htmlspecialchars($this->plat_1);
-            $this->plat_2= htmlspecialchars($this->plat_2);
-            $this->jedno_prijem= htmlspecialchars($this->jedno_prijem);
-            $this->investice= htmlspecialchars($this->investice);
-            $this->najem= htmlspecialchars($this->najem);
-            $this->inkaso= htmlspecialchars($this->inkaso);
-            $this->jidlo= htmlspecialchars($this->jidlo);
-            $this->telekomunikace= htmlspecialchars($this->telekomunikace);
-            $this->konicky= htmlspecialchars($this->konicky);
-            $this->vylety= htmlspecialchars($this->vylety);
-            $this->vzdelani= htmlspecialchars($this->vzdelani);
-            $this->kcelkem= htmlspecialchars($this->kcelkem);
-            $this->ksplatka= htmlspecialchars($this->ksplatka);
-            $this->hcelkem= htmlspecialchars($this->hcelkem);
-            $this->hsplatka= htmlspecialchars($this->hsplatka);
-        */
-
-        /*
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-            $stmt->bindParam(':date',$this->date);
-        */
         }
         public function update() {
             $query = 'INSERT INTO ' . $this->table . ' SET 
@@ -146,11 +119,10 @@
 
             $stmt = $this->conn->prepare($query);
 
-            foreach($this->a as $key => $val) {
+            foreach($this->a as $key => &$val) {
                     $val = htmlspecialchars($val);
                     $stmt->bindParam(':'.$key ,$val);
 
-                
             }
 
             if($stmt->execute()) {
@@ -166,7 +138,6 @@
 
         public function get_all() {
             $query = "SELECT * FROM ". $this->table;
-            var_dump($query);
             $stmt = $this->conn->prepare($query);
 
             $stmt->execute();
@@ -176,6 +147,15 @@
 
         public function get_one() {
             $query = "SELECT FROM ". $this->table. " WHERE id = :id";
+
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':id',$this->id);
+
+            $stmt->execute();
+        }
+        public function delete() {
+            $query = "DELETE FROM ". $this->table. "WHERE id = :id";
 
             $stmt = $this->conn->prepare($query);
 
