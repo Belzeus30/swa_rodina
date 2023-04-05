@@ -21,61 +21,35 @@ h1 {
   cursor: pointer;
 }
 
+
 td {
   font-weight: bold;
 }
-
-body {
+body{
   background-color: gray;
-  background-size: 100%;
-
 }
 
-.button:hover {
-  background-color: #002ead;
-  transition: 0.7s;
-}
-
-.button:focus {
-  outline-color: transparent;
-  outline-style: solid;
-  box-shadow: 0 0 0 4px #5a01a7;
-}
-
-.button:active {
-  background-color: #ffbf00;
-}
-
-/* Add styles to the form container */
-.form-container {
+.table {
   margin: 0 2rem 0 2rem;
-  padding: 10px;
+  padding: 5px;
   background-color: #FF9B00;
+ 
 }
 
-/* Full-width input fields */
-.form-container input[type=text],
-.form-container input[type=date] {
 
-  padding: 15px;
-  margin: 5px 0 22px 0;
+.table input[type=Number] {
+
+  padding: 8px;
+  margin: 5px 0 5px 0;
   border: none;
   background: white;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus,
-.form-container input[type=date]:focus {
+
+.table input[type=Number]:focus {
   background-color: #dcdcdc;
   outline: none;
 }
-
-
-
-.column {
-  float: left;
-}
-
 
 .middle {
   text-align: center;
@@ -86,68 +60,16 @@ body {
 .inputbox {
   align-items: center;
   display: flex;
-  justify-content: center;
-}
+  justify-content: left;
 
-/* Popup container */
-.popup {
-  text-align: center;
-  position: fixed;
-  display: none;
-  cursor: pointer;
-  width: 32rem;
-  height: 20rem;
-  padding: 2rem;
-  background-color: gray;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 40%;
-  border: 0.2rem solid black;
-  border-radius: 1rem;
 }
-
-.popup-dluhy {
+.outputbox {
+  align-items: center;
   display: flex;
-  justify-content: center;
-}
-
-.dluhy {
-  display: inline-block;
-  width: 50%;
-  margin: 0;
-}
-
-.close {
-  position: absolute;
-  right: -0rem;
-  top: -0rem;
-  background: none;
-  border: none;
+  justify-content: right;
 
 }
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 .column {
   width: fit-content;
 }
