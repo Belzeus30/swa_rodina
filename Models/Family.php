@@ -20,6 +20,12 @@
 		public $ksplatka; 
 		public $hcelkem; 
 		public $hsplatka;
+        public $vydaje;
+        public $prijmy;
+
+        public $cashflow;
+
+        public $dluh;
 
         private $a = array(
             "id" => null,
@@ -37,7 +43,12 @@
             "kcelkem" => null,
             "ksplatka" => null,
             "hcelkem" => null,
-            "hsplatka" => null);
+            "hsplatka" => null,
+            "vydaje" => null,
+            "prijmy" => null,
+            "cashflow" => null,
+            "dluh" => null,
+        );
 
 
         public function __construct($db) {
@@ -57,10 +68,15 @@
             $this->a["kcelkem"] =& $this->kcelkem;
             $this->a["ksplatka"] =& $this->ksplatka;
             $this->a["hcelkem"] =& $this->hcelkem;
-            $this->a["hsplatka"] =& $this->hsplatka;         
+            $this->a["hsplatka"] =& $this->hsplatka;  
+            $this->a["vydaje"]= & $this->vydaje;       
+            $this->a["prijmy"]= & $this->prijmy;       
+            $this->a["cashflow"]= & $this->cashflow; 
+            $this->a["dluh"]= & $this->dluh;      
         }
 
         public function create() {
+            $this->Calculate_cahflow();
             $query = 'INSERT INTO ' . $this->table . ' SET 
             plat_1 = :plat_1,
             plat_2 = :plat_2,
@@ -76,7 +92,11 @@
             kcelkem = :kcelkem,
             ksplatka = :ksplatka,
             hcelkem = :hcelkem,
-            hsplatka = :hsplatka';
+            hsplatka = :hsplatka,
+            vydaje = :vydaje,
+            prijmy = :prijmy,
+            cashflow = :cashflow,
+            dluh = :dluh';
 
             $stmt = $this->conn->prepare($query);
 
@@ -100,6 +120,7 @@
 
         }
         public function update() {
+            $this->Calculate_cahflow();
             $query = 'INSERT INTO ' . $this->table . ' SET 
             plat_1 = :plat_1,
             plat_2 = :plat_2,
@@ -115,7 +136,11 @@
             kcelkem = :kcelkem,
             ksplatka = :ksplatka,
             hcelkem = :hcelkem,
-            hsplatka = :hsplatka WHERE id=:id';
+            hsplatka = :hsplatka,
+            vydaje = :vydaje,
+            prijmy = :prijmy,
+            dluh = :dluh,
+            cashflow = :cashflow WHERE id=:id';
 
             $stmt = $this->conn->prepare($query);
 
@@ -146,13 +171,14 @@
         }
 
         public function get_one() {
-            $query = "SELECT FROM ". $this->table. " WHERE id = :id";
+            $query = "SELECT * FROM ". $this->table. " WHERE id = :id";
 
             $stmt = $this->conn->prepare($query);
 
             $stmt->bindParam(':id',$this->id);
 
             $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
         }
         public function delete() {
             $query = "DELETE FROM ". $this->table. "WHERE id = :id";
@@ -162,6 +188,21 @@
             $stmt->bindParam(':id',$this->id);
 
             $stmt->execute();
+
+        }
+        private function Calculate_cahflow() {
+            $this->prijmy = $this->plat_1 * 12 + $this->plat_2 * 12 + $this->jedno_prijem + $this->investice;
+            $this->vydaje = $this->najem * 12 +  
+                            $this->inkaso * 12 + 
+                            $this->jidlo + 
+                            $this->telekomunikace + 
+                            $this->konicky + 
+                            $this->vylety + 
+                            $this->vzdelani + 
+                            $this->ksplatka * 12 + 
+                            $this->hsplatka * 12;
+            $this->cashflow = $this->prijmy - $this->vydaje;
+            $this->dluh = ($this->kcelkem - $this->ksplatka * 12) + ($this->hcelkem - $this->hsplatka * 12);
         }
 
     }
