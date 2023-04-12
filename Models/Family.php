@@ -22,8 +22,11 @@
 		public $hsplatka;
         public $vydaje;
         public $prijmy;
+
         public $cashflow;
+
         public $dluh;
+
         private $a = array(
             "id" => null,
             "plat_1" => null,

@@ -2,15 +2,14 @@
 function Show_result(id) {
     let data = {'id':id};
     $.ajax({
-        url: "includes/family_details.php",
+        url: "index.php",
         method: "post",
         data: data,
         success : function(data){
-            $('body').append(data);
-            $('family-details').styte.display = "block";
-
+            location.reload();
+           alert(1) ;
         },
-        error : function() {alert("error")} ,
+        error : function() {alert(error)} ,
     })
 
 }

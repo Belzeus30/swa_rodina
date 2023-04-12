@@ -21,7 +21,22 @@ h1 {
   cursor: pointer;
 }
 
+.center{
+  position:absolute;
+  left:48.5rem;
+  top:130px;
 
+}
+.form{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left:20%;
+  right:20%;
+  background-color: cyan;
+  border: 2px solid #474747;
+  z-index: 9;
+}
 td {
   font-weight: bold;
 }
@@ -37,17 +52,17 @@ body{
 }
 
 
-.table input[type=Number] {
+.table input[type=Number], input[type=text] {
 
   padding: 8px;
   margin: 5px 0 5px 0;
   border: none;
   background: white;
-  height:3rem;  
+  height:2.5rem;  
 }
 
 
-.table input[type=Number]:focus {
+.table input[type=Number]:focus, input[type=text]:focus {
   background-color: #dcdcdc;
   outline: none;
 }
@@ -84,7 +99,6 @@ body{
   width:  10rem;
   border: 1px solid black;
   border-radius: 0.3rem;
-  cursor: default;
 }
 .family:hover {
   background: rebeccapurple;
