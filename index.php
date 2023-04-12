@@ -12,7 +12,7 @@
 require_once "Models/Database.php";
 require_once "Models/Family.php";
 include_once "config/init.php";
-
+error_reporting(0);
 $result = $Family->get_all();
 
 ?>
@@ -24,7 +24,7 @@ $result = $Family->get_all();
 		<?php while ($row = $result->fetch(PDO::FETCH_ASSOC)) : ?>
 			<div class="family">
 				<div onclick="Show_result(<?= $row['ID'] ?>)">
-					<h4>Rodina <?= $row["ID"] ?></h4>
+					<h4><?= $row["name"] ?></h4>
 					<p>Příjmy: <?= $row["prijmy"] ?></p>
 					<p>Výdaje: <?= $row["vydaje"] ?></p>
 					<p>Cashflow: <?= $row["cashflow"] ?></p>
@@ -49,7 +49,7 @@ $result = $Family->get_all();
 					</h1>
 					<table>
 						<tr>
-							<td><input type="text" name="jmeno" required></td>
+							<td><input type="text" name="name" required></td>
 						</tr>
 					</table>
 					<h1 id="zapis">
@@ -127,6 +127,7 @@ $result = $Family->get_all();
 						</tr>
 					</table>
 					<input type="submit" class="button" id="submit">
+					<input type="button" onclick="closeForm()">
 
 				</form>
 			</div>
@@ -134,13 +135,6 @@ $result = $Family->get_all();
 	</div>
 	<div class="outputbox">
 		<div class="column middle">
-			<?php
-			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-				$Family->id = isset($_POST['id']) ? $_POST['id'] : header("Location: ../index.php");
-				$Selected_family =  $Family->get_all();
-				var_dump($Selected_family);
-			}
-			?>
 			<div class="table">
 				<h1 id="zapis">
 					Zůstatek
@@ -160,6 +154,6 @@ function openForm() {
 }
 </script>
 <script src="includes/footer.js"></script>
-
+<?php include "includes/family_details.php"; ?>
 
 </html>

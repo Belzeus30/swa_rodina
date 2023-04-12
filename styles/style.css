@@ -99,7 +99,22 @@ body{
   width:  10rem;
   border: 1px solid black;
   border-radius: 0.3rem;
+  cursor: default;
 }
 .family:hover {
   background: rebeccapurple;
+}
+#family-detail {
+  width: 20rem;
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  
+ 
+  background-color: orange;
 }

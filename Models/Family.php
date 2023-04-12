@@ -5,6 +5,7 @@
         private $conn;
         private $table = "family";
         public $id;
+        public $name;
         public $plat_1; 
 		public $plat_2;
 		public $jedno_prijem; 
@@ -29,6 +30,7 @@
 
         private $a = array(
             "id" => null,
+            "name" =>null,
             "plat_1" => null,
             "plat_2" => null,
             "jedno_prijem" => null,
@@ -54,6 +56,7 @@
         public function __construct($db) {
             $this->conn = $db;
             $this->a["id"] =& $this->id;
+            $this->a["name"] =& $this->name;
             $this->a["plat_1"] =& $this->plat_1;
             $this->a["plat_2"] =& $this->plat_2;
             $this->a["jedno_prijem"] =& $this->jedno_prijem;
@@ -78,6 +81,7 @@
         public function create() {
             $this->Calculate_cahflow();
             $query = 'INSERT INTO ' . $this->table . ' SET 
+            name = :name,
             plat_1 = :plat_1,
             plat_2 = :plat_2,
             jedno_prijem = :jedno_prijem,
@@ -122,6 +126,7 @@
         public function update() {
             $this->Calculate_cahflow();
             $query = 'INSERT INTO ' . $this->table . ' SET 
+            name = :name,
             plat_1 = :plat_1,
             plat_2 = :plat_2,
             jedno_prijem = :jedno_prijem,

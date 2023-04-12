@@ -2,7 +2,8 @@
 require_once "../Models/Database.php";
 require_once "../Models/Family.php";
 require_once "../config/init.php";
-
+var_dump($_POST["name"]);
+$Family->name = isset($_POST['name']) ? $_POST['name'] : "";
 $Family->plat_1 = isset($_POST['plat']) ? intval($_POST['plat']) : 0;
 $Family->plat_2 = isset($_POST['2plat']) ? intval($_POST['2plat']) : 0;
 $Family->jedno_prijem = isset($_POST['jedno_prijem']) ? intval($_POST['jedno_prijem']) : 0;
@@ -18,9 +19,9 @@ $Family->kcelkem = isset($_POST['kcelkem']) ? intval($_POST['kcelkem']) : 0;
 $Family->ksplatka = isset($_POST['ksplatka']) ? intval($_POST['ksplatka']) : 0;
 $Family->hcelkem = isset($_POST['hcelkem']) ? intval($_POST['hcelkem']) : 0;
 $Family->hsplatka = isset($_POST['hsplatka']) ? intval($_POST['hsplatka']) : 0;
-
+var_dump($Family->name);
 $Family->create();
 
-header("Location: ../index.php");
+//header("Location: ../index.php");
 
 ?>
