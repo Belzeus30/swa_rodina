@@ -12,7 +12,7 @@
 require_once "Models/Database.php";
 require_once "Models/Family.php";
 include_once "config/init.php";
-
+error_reporting(0);
 $result=$Family->get_all();
 
 ?>
@@ -29,10 +29,6 @@ $result=$Family->get_all();
 					<p>Výdaje: <?=$row["vydaje"] ?></p>
 					<p>Cashflow: <?=$row["cashflow"] ?></p>
 					<p>Dluh: <?=$row["dluh"] ?></p>
-				</div>
-				<div>
-					<button onclick="Edit_family()">Upravit</button>
-					<button onclick="Delete_family()">Smazat</button>
 				</div>
 			</div>
 		<?php endwhile?>
@@ -121,13 +117,6 @@ $result=$Family->get_all();
 	</div>
 	<div class="outputbox">
 		<div class="column middle">
-			<?php
-			if($_SERVER['REQUEST_METHOD'] == 'POST')  {
-				$Family->id =isset($_POST['id'])? $_POST['id'] : header("Location: ../index.php");
-				$Selected_family =  $Family->get_all();
-				var_dump($Selected_family);
-			}
-			?>
 			<div class="table">
 				<h1 id="zapis">
 					Zůstatek
@@ -141,6 +130,10 @@ $result=$Family->get_all();
 		</div>
 	</div>
 </body>
+<?php
+include "includes/family_details.php";
+
+?>
 
 <script src="includes/footer.js"></script>
 
