@@ -15,9 +15,10 @@ var_dump($selected_family);
 ?>
 
 <div>
-<div>
-    <h3><?=$selected_family['name'] ?></h3>
-</div>
+    <div>
+        <h3><?=$selected_family['name'] ?></h3>
+        <button onclick="Edit_Family()"></button>
+    </div>
 
 
 </div>
