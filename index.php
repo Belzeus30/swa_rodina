@@ -6,13 +6,14 @@
 	<meta charset="UTF-8" />
 	<title>SWA</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="includes/footer.js" defer></script>
 </head>
 
 <?php
 require_once "Models/Database.php";
 require_once "Models/Family.php";
 include_once "config/init.php";
-error_reporting(0);
+//error_reporting(0);
 $result = $Family->get_all();
 
 ?>
@@ -22,8 +23,8 @@ $result = $Family->get_all();
 	<div class="family-list">
 
 		<?php while ($row = $result->fetch(PDO::FETCH_ASSOC)) : ?>
-			<div class="family">
-				<div onclick="Show_result(<?= $row['ID'] ?>)">
+			<div class="family" data-family-id="<?= $row['ID'] ?>">
+				<div>
 					<h4><?= $row["name"] ?></h4>
 					<p>Příjmy: <?= $row["prijmy"] ?></p>
 					<p>Výdaje: <?= $row["vydaje"] ?></p>
@@ -148,12 +149,7 @@ $result = $Family->get_all();
 		</div>
 	</div>
 </body>
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-</script>
-<script src="includes/footer.js"></script>
-<?php include "includes/family_details.php"; ?>
+
+<?php include_once "includes/family_details.php"; ?>
 
 </html>
