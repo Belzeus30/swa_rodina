@@ -5,7 +5,6 @@ if(isset($_POST['edit_id'])) :
     include '../Models/Family.php';
     include '../config/init.php';
     $selected_id=isset($_POST['edit_id'])?$_POST['edit_id']:"";
-    var_dump($selected_id);
     $Family->id = $selected_id;
     $selected_family=$Family->get_one();
 
