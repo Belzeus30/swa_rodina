@@ -13,16 +13,13 @@ Array.from(familyDiv).forEach(function(element) {
             data: data,
             success: (data)=>{
                 $('body').append(data);
-                alert(data);},
+                alert(true);},
             error: ()=>{alert("error")}
         })
     })})
-document.addEventListener('click', function(event) {
-if (event.target !== familyDetails && !familyDetails.contains(event.target)) {
-    familyDetails.classList.remove('active');
-    location.reload();
-}
-});
+    $('body').on('click','.deleteWasteStream' , ()=>{
+        familyDetails.remove()
+    })
   
 
 function openForm() {
