@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/index.css">
 
 <head>
 	<meta charset="UTF-8" />
@@ -19,27 +20,22 @@ $result = $Family->get_all();
 ?>
 
 <body>
-	<h1>Rodina projekt</h1>
-	<div class="family-list">
-
-		<?php while ($row = $result->fetch(PDO::FETCH_ASSOC)) : ?>
-			<div class="family" data-family-id="<?= $row['ID'] ?>">
-				<div>
+	<div class="main">
+		<h1>Rodina projekt</h1>
+		<button class="button" onclick=openForm(myForm)>Zapis</button>
+		<div class="family-list">
+			
+			<?php while ($row = $result->fetch(PDO::FETCH_ASSOC)) : ?>
+				<div class="family" data-family-id="<?= $row['ID'] ?>">
 					<h4><?= $row["name"] ?></h4>
 					<p>Příjmy: <?= $row["prijmy"] ?></p>
+					<span> </span>
 					<p>Výdaje: <?= $row["vydaje"] ?></p>
 					<p>Cashflow: <?= $row["cashflow"] ?></p>
 					<p>Dluh: <?= $row["dluh"] ?></p>
 				</div>
-				<div>
-					<button onclick="Edit_family()">Upravit</button>
-					<button onclick="Delete_family()">Smazat</button>
-				</div>
-			</div>
-		<?php endwhile ?>
-	</div>
-	<div class=center>
-		<button class="button" onclick=openForm(myForm)>Zapis</button>
+			<?php endwhile ?>
+		</div>
 	</div>
 	<div class="inputbox">
 		<div class="column middle">
@@ -149,7 +145,5 @@ $result = $Family->get_all();
 		</div>
 	</div>
 </body>
-
-<?php include_once "includes/family_details.php"; ?>
 
 </html>

@@ -6,6 +6,6 @@ $Family->id =isset($_POST['id'])? $_POST['id'] : header("Location: ../index.php"
 
 $Family->delete();
 
-header("Location: index.php")
+header("Location: ../index.php")
 
 ?>

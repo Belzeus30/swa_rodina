@@ -1,0 +1,41 @@
+.family-list {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.family {
+    border-radius: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .button {
+    position: relative;
+    background-color: #0a0a23;;
+    border-radius: .5rem;
+    padding: 1rem;
+    width: 3rem;
+    margin: 2rem;
+    color: #fff;
+    left: 0;
+    right: 0;
+    text-align: center  ;
+  
+
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .family:hover {
+    background: rebeccapurple;
+  }
