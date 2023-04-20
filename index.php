@@ -18,7 +18,7 @@ $result = $Family->get_all();
 
 ?>
 
-<body>
+<body>;	
 	<h1>Rodina projekt</h1>
 	<div class="family-list">
 
