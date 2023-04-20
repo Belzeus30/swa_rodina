@@ -12,14 +12,11 @@ Array.from(familyDiv).forEach(function(element) {
             type: 'POST',
             data: data,
             success: (data)=>{
-                $('body').append(data);
-                alert(true);},
+                $('body').append(data);},
             error: ()=>{alert("error")}
         })
     })})
-    $('body').on('click','.deleteWasteStream' , ()=>{
-        familyDetails.remove()
-    })
+    
   
 
 function openForm() {

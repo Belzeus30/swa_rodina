@@ -16,6 +16,7 @@ if(isset($_POST['edit_id'])) :
 ?>
 
 <div id="family-detail">
+<button onclick="location.reload()">Close</button>
     <div>
         <h3><?=$selected_family['name']?></h3>
         <button onclick="Edit_Family(<?=$selected_family['ID']?>)">Upravit</button>
