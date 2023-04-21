@@ -19,8 +19,11 @@ Array.from(familyDiv).forEach(function(element) {
     
   
 
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
+function openPopup() {
+    document.getElementsByClassName("popup")[0].style.display = "block";
+  }
+  function closePopup() {
+    document.getElementsByClassName("popup")[0].style.display = "none";
   }
 
 function Delete_Family(id) {

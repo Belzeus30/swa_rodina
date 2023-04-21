@@ -7,6 +7,7 @@
 	<title>SWA</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 	<script src="includes/footer.js" defer></script>
+	<script src="includes/form.js" defer></script>
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/index.css">
 </head>
@@ -23,7 +24,7 @@ $result = $Family->get_all();
 <body>
 	<div class="main">
 		<h1>Rodina projekt</h1>
-		<button class="button" onclick=openForm(myForm)>Zapis</button>
+		<button class="button" onclick=openPopup()>Zapis</button>
 		<table class="family-list">
 			<thead>
 				<th>Název</th>
