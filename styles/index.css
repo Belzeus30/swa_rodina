@@ -10,7 +10,7 @@
 .family-list tr {
   border-radius: 1rem;
     padding: .5rem;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -56,6 +56,7 @@
 
   .popup {
     position: absolute;
+    top: 0rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -67,6 +68,7 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    margin-top: 30%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -89,8 +91,16 @@
   border-radius: .5rem;
   border: 1px solid black;
 }
-.vydaje {
+.vydaje-druhy {
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
+}
+.card.active {
+  display: flex;
+}
+
+.card button {
+  padding: .5rem;
 }

@@ -4,6 +4,7 @@
             <h3>Název rodiny</h3>
             <label for="name">jméno</label>
             <input type="text" name="name">
+            <button type="button">Další</button>
         </div>
         <div class="card prijmy" data-step>
             <h3>Příjmy</h3>
@@ -11,47 +12,53 @@
             <input type="number" name="plat">
             <label for="2plat">2. plat(za měsíc)</label>
             <input type="number" name="2plat">
-            <label for="jedno_prijem">Jednorázové příjmy(celkem)</label>
+            <label for="jedno_prijem">Jednorázové příjmy</label>
             <input type="number" name="jedno_prijem">
             <label for="investice">Investice(celkem)</label>
             <input type="number" name="investice">
+            <button type="button">Další</button>
+            <button type="button">Předchozí</button>
         </div>
-        <div class="card" data-step>
+        <div class="card vydaje" data-step>
             <h3>Výdaje</h3>
-            <div class="vydaje">
+            <div class="vydaje-druhy">
                 <div class="zbytne">
                     <p><strong>Zbytné</strong></p>
                     <label for="najem">Nájem/Daň(za měsíc)</label>
                     <input type="number" name="najem">
                     <label for="inkaso">Voda+Elektřina(za měsíc)</label>
                     <input type="number" name="inkaso">
-                    <label for="jidlo">Jídlo(celkem)</label>
+                    <label for="jidlo">Jídlo</label>
                     <input type="number" name="jidlo">
                     <label for="telekomunikace">Telekomunikace</label>
                     <input type="number" name="telekomunikace">
                 </div>
                 <div class="nezbytne">
                     <p><strong>Nezbytné</strong></p>
-                    <label for="konicky">Koníčky-celkem</label>
+                    <label for="konicky">Koníčky</label>
                     <input type="number" name="konicky">
-                    <label for="vylety">Výlety+Zábava+dárky-celkem</label>
+                    <label for="vylety">Jiné</label>
                     <input type="number" name="vylety">
-                    <label for="vzdelani">Vzdělání-celkem</label>
+                    <label for="vzdelani">Vzdělání</label>
                     <input type="number" name="vzdelani">
+                    <button type="button">Další</button>
+                    <button type="button">Předchozí</button>
                 </div>
             </div>
         </div>
 
         <div class="card dluhy" data-step>
             <h3>Dluhy</h3>
-            <label for="kcelkem"></label>
+            <label for="kcelkem">Kreditka dluh</label>
             <input type="number" name="kcelkem">
-            <label for="ksplatka"></label>
+            <label for="ksplatka">Kreditka splátka</label>
             <input type="number" name="ksplatka">
-            <label for="hcelkem"></label>
+            <label for="hcelkem">Hypotéka dluh</label>
             <input type="number" name="hcelkem">
-            <label for="hsplatka"></label>
+            <label for="hsplatka">Hypotéka splátka</label>
             <input type="number" name="hsplatka">
+            <button type="button">Další</button>
+            <button type="submit">Předchozí</button>
         </div>
     </form>
 </div>
