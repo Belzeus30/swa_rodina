@@ -31,7 +31,7 @@ body{
 }
 
 
-.table input[type=Number], input[type=text] {
+.table input[type=Number] input[type=text] {
 
   padding: 8px;
   margin: 5px 0 5px 0;
