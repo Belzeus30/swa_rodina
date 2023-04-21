@@ -4,8 +4,12 @@ h1 {
 }
 
 
+.center{
+  position:relative;
+  left:48.5rem;
+  top:130px;
 
-
+}
 .form{
   display: none;
   position: fixed;
@@ -16,11 +20,14 @@ h1 {
   border: 2px solid #474747;
   z-index: 9;
 }
-td {
+.table td {
   font-weight: bold;
 }
 body{
   background-color: #A7A7A7;
+  margin: 0;
+  /*background: rgb(2,0,36);
+  background: linear-gradient( rgba(0,212,255,1) 0%, rgba(11,9,121,1) 35%, rgba(2,0,36,1) 100%);*/
 }
 
 .table {
@@ -31,7 +38,7 @@ body{
 }
 
 
-.table input[type=Number] input[type=text] {
+.table input[type=Number]  input[type=text] {
 
   padding: 8px;
   margin: 5px 0 5px 0;
@@ -41,7 +48,7 @@ body{
 }
 
 
-.table input[type=Number]:focus, input[type=text]:focus {
+.table input[type=Number]:focus  input[type=text]:focus {
   background-color: #dcdcdc;
   outline: none;
 }
@@ -59,23 +66,13 @@ body{
   justify-content: center;
 
 }
-.outputbox {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-
-}
-
+  
 .column {
   width: fit-content;
   
 }
-
-
-
-
 #family-detail {
-  width: 20rem;
+  width: fit-content;
   display: block;
   position: absolute;
   margin-left: auto;
@@ -84,10 +81,28 @@ body{
   right: 0;
   text-align: center;
   top: 50%;
-  
- 
   background-color: orange;
 }
-#family-detail.active {
-    display: block; 
+.clmn{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  gap:2rem;
+}
+  
+
+.grid{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding:3rem;
+}
+.edit {
+  background-color: white;
+  height:1.5rem;
+  width:10rem;
+  border-radius: 2rem;
+}
+.edit:active{
+  opacity: 0.5;
 }
