@@ -53,6 +53,10 @@
   .family:hover {
     background: rebeccapurple;
   }
+body {
+  position: relative;
+  height: 100vh;
+}
 
   .popup {
     display: none;
@@ -60,11 +64,16 @@
     top: 0rem;
     width: 100%;
     background-color: rgba(60, 60, 60, 0.2);
-    height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
   }
   .card{
     position: relative;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
     margin-left: auto;
     margin-right: auto;
     top: 15rem;
@@ -73,6 +82,11 @@
     border: 1px solid black;
     border-radius: .5rem;
     padding: .5rem;
+    height: 27rem;
+    animation: slide 250ms 250ms ease-in-out reverse both; 
+    
+    box-shadow: 2px 2px 9px 1px rgba(0, 0 ,0, .5);
+
   }
 .zbytne , .nezbytne {
   display: flex;
@@ -82,7 +96,7 @@
   flex-direction: column;
 }
 .card input {
-  width: 90%;
+  width: 100%;
   border-radius: .5rem;
   border: 1px solid black;
   padding: .5rem;
@@ -111,7 +125,7 @@ input::-webkit-inner-spin-button {
   flex-direction: row;
 }
 .card.active {
-  display: block;
+  animation: fade 250ms ease-in-out reverse;
 }
 
 .card button {
@@ -121,6 +135,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   gap: .25rem;
+  width: 80%;
 }
 .button-group {
   display: flex;
@@ -130,4 +145,46 @@ input::-webkit-inner-spin-button {
   align-items: center;
   margin: 1rem ;
 }
+.hide {
+  display:none; 
+}
 @import "compass/css3";
+
+@keyframes slide{
+  0% {
+    transform: translateX(200%) ;
+    opacity: 0;
+
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade{
+  0% {
+    transform: scale(1) ;
+    opacity: 1;
+
+  }
+  50% {
+    transform: scale(.75);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
+}

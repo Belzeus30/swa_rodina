@@ -1,19 +1,19 @@
 <div class="popup">
 
     <form action="parsers/save.php" method="post" data-multi-step>
-        <div class="card jmeno" data-step>
+        <div class="card" id="jmeno" data-step>
             <div class="close" onclick="closePopup()">&#10006;</div>
             <h3>Název rodiny</h3>
             <div class="form-group">
-                <label for="name">Jméno</label>
-                <input type="text" name="name">
-            </div>
+                <label for="name" >Jméno</label>
+                <input type="text" name="name" required>
+            </div>  
             <div class="button-group">
                 <button type="button" data-next>Další</button>
             </div>
 
         </div>
-        <div class="card prijmy" data-step>
+        <div class="card prijmy hide" data-step>
         <div class="close" onclick="closePopup()">&#10006;</div>
             <h3>Příjmy</h3>
             <div class="form-group">
@@ -37,7 +37,7 @@
                 <button type="button" data-next>Další</button>
             </div>
         </div>
-        <div class="card vydaje" data-step>
+        <div class="card vydaje hide" data-step>
         <div class="close" onclick="closePopup()">&#10006;</div>
             <h3>Výdaje</h3>
             <div class="vydaje-druhy">
@@ -84,7 +84,7 @@
             </div>
         </div>
 
-        <div class="card dluhy" data-step>
+        <div class="card dluhy hide" data-step>
         <div class="close" onclick="closePopup()">&#10006;</div> 
             <h3>Dluhy</h3>
             <div class="form-group">

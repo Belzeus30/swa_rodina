@@ -12,16 +12,33 @@ let currentStep = formSteps.findIndex(step => {
  }
 
  multiStepForm.addEventListener("click", (e)=> {
-    if(e.target.matches("[data-next]")) {
-        currentStep += 1;
+   let incrementor
+    if(e.target.matches("[data-next]") ) {
+        incrementor = 1;
     } else if(e.target.matches("[data-previos]")) {
-        currentStep -=1
-    }
-    showCurrentStep()
+        incrementor =-1
+    } 
+    if(incrementor==null) return
+   const inputs = [...formSteps[currentStep].querySelectorAll("input")]
+   const allValid = inputs.every(input=> input.reportValidity())
+   if(allValid) {
+      currentStep += incrementor;
+      showCurrentStep()
+   }
+    
  })
+
+ formSteps.forEach(step=> {
+   step.addEventListener("animationend", (e)=> {
+      e.target.classList.toggle("hide", !e.target.classList.contains("active"))
+      formSteps[currentStep].classList.remove("hide")
+ })
+})
  function showCurrentStep() {
     formSteps.forEach((step, index) => {
         step.classList.toggle("active", index===currentStep)
+       
+        
     })
     
  }
