@@ -19,12 +19,7 @@ Array.from(familyDiv).forEach(function(element) {
     
   
 
-function openPopup() {
-    document.getElementsByClassName("popup")[0].style.display = "block";
-  }
-  function closePopup() {
-    document.getElementsByClassName("popup")[0].style.display = "none";
-  }
+  
 
 function Delete_Family(id) {
     let data =  {'id':id};

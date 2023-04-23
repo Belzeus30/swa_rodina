@@ -1,38 +1,56 @@
+
+:root {
+  --light-gray: #A7A7A7;
+  --dark-blue : #0a0a23;
+  --white : #fff;
+  --lighter-gray: #D8D8D8A0;
+  --lighter-blue:#0a0a23B0;
+  --light-blue: aliceblue;
+  --overlay: rgba(60, 60, 60, 0.4);
+
+}
+
 .family-list {
-    background-color: aliceblue;
+    background-color: var(--light-blue);
     padding: 1rem;
     border-radius: 1rem;
+    width: 50%;
 }
 .family-list td{
+  display: inherit;
   width: 5rem;
   text-align: center;
+  max-width: 30rem;
+  overflow: hidden;
+
 }
 .family-list tr {
-  border-radius: 1rem;
+    border-radius: 1rem;
     padding: .5rem;
     display: flex; 
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 5rem;
 }
 .family-list thead >tr {
-  background-color: #0a0a23;
+  background-color: var(--dark-blue);
 }
 
 .family-list th {
-    width: 100%;
-    color: #fff;
+    display: inherit;
+    width: 5rem;
+    color: var(--white);
   }
   .button {
     position: relative;
-    background-color: #0a0a23;;
+    background-color: var(--dark-blue);
     border-radius: .5rem;
     padding: 1rem;
     width: 8rem;
     border: none;
     margin: 2rem;
-    color: #fff;
+    color: var(--white);
     left: 0;
     right: 0;
     text-align: center  ;
@@ -40,7 +58,7 @@
 
   }
   .button:hover {
-    background-color: grey;
+    background-color: var(--lighter-blue);
   }
   .main {
     width: 100%;
@@ -51,7 +69,8 @@
 
   }
   .family:hover {
-    background: rebeccapurple;
+    background: var(--lighter-blue);
+    color: var(--white);
   }
 body {
   position: relative;
@@ -63,7 +82,7 @@ body {
     position: absolute;
     top: 0rem;
     width: 100%;
-    background-color: rgba(60, 60, 60, 0.2);
+    background-color: var(--overlay) ;
     height: 100%;
     overflow-x: hidden;
   }
@@ -78,14 +97,14 @@ body {
     margin-right: auto;
     top: 15rem;
     width: 30rem;
-    background-color: #fff;
-    border: 1px solid black;
+    background-color: var(--light-blue);
+    border: 1px solid var(--dark-blue);
     border-radius: .5rem;
     padding: .5rem;
     height: 27rem;
     animation: slide 250ms 250ms ease-in-out reverse both; 
     
-    box-shadow: 2px 2px 9px 1px rgba(0, 0 ,0, .5);
+    box-shadow: 2px 2px 9px 1px var(--dark-blue);
 
   }
 .zbytne , .nezbytne {
@@ -98,11 +117,12 @@ body {
 .card input {
   width: 100%;
   border-radius: .5rem;
-  border: 1px solid black;
+  border: 1px solid var(--dark-blue);
   padding: .5rem;
 }
 .card input:focus, .card input:hover {
-  background-color: #D8D8D8A0;
+  background-color: var(--lighter-blue);
+  color: white;
 }
 .card h3 {
   text-align: center;
@@ -120,7 +140,6 @@ input::-webkit-inner-spin-button {
 }
 .vydaje-druhy {
   display: flex;
-  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
 }
@@ -128,8 +147,13 @@ input::-webkit-inner-spin-button {
   animation: fade 250ms ease-in-out reverse;
 }
 
+.popup.show {
+  display: block;
+}
+
 .card button {
   padding: .5rem;
+
 }
 .form-group {
   display: flex;
@@ -143,7 +167,9 @@ input::-webkit-inner-spin-button {
   justify-items: center;
   justify-content: center;
   align-items: center;
-  margin: 1rem ;
+  padding: 0;
+  position: relative;
+  bottom: .5rem;
 }
 .hide {
   display:none; 
