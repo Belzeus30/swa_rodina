@@ -134,9 +134,9 @@ if (isset($_POST['edit_id'])):
                 </div>
             </form>
             <div class="button-group">
-            <button class="editb" data-enable-button>Upravit</button>
-            <button class="editb" onclick="location.reload()">Zavřít</button>
-            <button class="editb" onclick="Delete_Family(<?= $selected_family['ID'] ?>)">Smazat</button>
+            <button class="button" data-enable-button>Upravit</button>
+            <button class="button" onclick="location.reload()">Zavřít</button>
+            <button class="button" onclick="Delete_Family(<?= $selected_family['ID'] ?>)">Smazat</button>
             </div>
             
 
