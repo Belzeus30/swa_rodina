@@ -27,14 +27,14 @@ if (isset($_POST['edit_id'])) :
                 
                 <?php if ($selected_family['cashflow'] > (6 * ($selected_family['plat_1'] + $selected_family['plat_2']))) : ?>
 
-                    <p>napad na investice </p>
+                    <p>Investuj do kryptoměn nebo akcií </p>
                 <?php elseif ($selected_family['cashflow'] > 0) : ?>
-                    <p>schov si penize </p>
+                    <p>Schov si penize </p>
                 <?php else : ?>
-                    <p> else zvedni prijmy a sniz vydaje </p>
+                    <p>Zvedni prijmy a sniz vydaje </p>
                 <?php endif ?>
                 <div class="grid">
-                <label for="name">Jméno rodiny</label>
+                <label for="name"><b>Jméno rodiny</b></label>
                 <input name="name" class="edit1" <?= $selected_family['name']?> data-form-input disabled>
                     <!-- Prijmy -->
                     <div class="clmn">
