@@ -3,8 +3,8 @@ const familyDiv = document.getElementsByClassName('family');
 
 const familyDetails = document.getElementById('family-detail');
 
-Array.from(familyDiv).forEach(function(element) {
-    element.addEventListener('click', function() {
+Array.from(familyDiv).forEach(function(e) {
+    e.addEventListener('click', function() {
         const familyId = this.dataset.familyId; 
           data = {'edit_id':familyId};
         $.ajax({

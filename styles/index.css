@@ -9,7 +9,6 @@
   --lighter-blue:#0a0a23B0;
   --light-blue: aliceblue;
   --overlay: rgba(60, 60, 60, 0.4);
-
 }
 
 body {
@@ -22,7 +21,7 @@ body {
     padding: 1rem;
     border-radius: 1rem;
     width: 50%;
-}
+} 
 .family-list td{
   display: inherit;
   width: 5rem;
