@@ -17,7 +17,7 @@ if (isset($_POST['edit_id'])) :
     <div id="family-detail">
 
         <div>
-            <form data-edit-form action="parsers/edit.php?id=<?=$selected_id?>">
+            <form data-edit-form method="post" action="parsers/edit.php?id=<?=$selected_id?>">
                 <h1 id="zapis">
                     Zůstatek
                 </h1>
