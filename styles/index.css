@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
 
 :root {
   --light-gray: #A7A7A7;
@@ -8,6 +10,11 @@
   --light-blue: aliceblue;
   --overlay: rgba(60, 60, 60, 0.4);
 
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1em;
 }
 
 .family-list {
@@ -43,6 +50,9 @@
     color: var(--white);
   }
   .button {
+    
+    font-family: 'Rajdhani', sans-serif ;
+    font-size: 1em;
     position: relative;
     background-color: var(--dark-blue);
     border-radius: .5rem;
@@ -117,7 +127,7 @@ body {
 .card input {
   width: 100%;
   border-radius: .5rem;
-  border: 1px solid var(--dark-blue);
+  border: 2px solid var(--dark-blue);
   padding: .5rem;
 }
 .card input:focus, .card input:hover {
@@ -203,14 +213,4 @@ input::-webkit-inner-spin-button {
     transform: scale(0);
     opacity: 0;
   }
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-  
 }

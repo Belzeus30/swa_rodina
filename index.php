@@ -6,8 +6,9 @@
 	<meta charset="UTF-8" />
 	<title>SWA</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<link rel="icon" type="images/abcus.ico" href="images/abcus.ico">
 	<script src="includes/footer.js" defer></script>
-	<script src="includes/form.js" defer></script>
+	<script src="includes/create_form.js" defer></script>
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/index.css">
 </head>

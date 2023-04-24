@@ -2,7 +2,7 @@
 require_once "../Models/Database.php";
 require_once "../Models/Family.php";
 require_once "../config/init.php";
-$Family->id =isset($_POST['id'])? $_POST['id'] : die();
+$Family->id =isset($_GET['id'])? $_GET['id'] : die();
 $Family->name = isset($_POST['name']) ? $_POST['name'] : "";
 $Family->plat_1 = isset($_POST['plat']) ? intval($_POST['plat']) : 0;
 $Family->plat_2 = isset($_POST['2plat']) ? intval($_POST['2plat']) : 0;
