@@ -37,53 +37,53 @@ if (isset($_POST['edit_id'])) :
                     <div class="clmn">
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">1.plat (měsíčně):</label>
-                            <input type="text" class="edit" value="<?= $selected_family['plat_1'] ?>" data-form-input disabled>
+                            <input name="1plat"  type="text" class="edit" value="<?= $selected_family['plat_1'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">2.plat (měsíčně):</label>
-                            <input type="text" class="edit" value="<?= $selected_family['plat_2'] ?>" data-form-input disabled>
+                            <input name="2plat" type="text" class="edit" value="<?= $selected_family['plat_2'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Jednorázové přijmy:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['jedno_prijem'] ?>" data-form-input disabled>
+                            <input name="jedno_prijem" type="text" class="edit" value="<?= $selected_family['jedno_prijem'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Investice:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['investice'] ?>" data-form-input disabled>
+                            <input name="investice" type="text" class="edit" value="<?= $selected_family['investice'] ?>" data-form-input disabled>
                         </div>
                     </div>
                     <!-- Vydaje -->
                     <div class="clmn">
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Nájem/Daň(měsíčně):</label>
-                            <input type="text" class="edit" value="<?= $selected_family['najem'] ?>" data-form-input disabled>
+                            <input name="najem" type="text" class="edit" value="<?= $selected_family['najem'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Voda+Elektřina(za měsíc):</label>
-                            <input type="text" class="edit" value="<?= $selected_family['inkaso'] ?>" data-form-input disabled>
+                            <input name="inkaso" type="text" class="edit" value="<?= $selected_family['inkaso'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Jídlo:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['jidlo'] ?>" data-form-input disabled>
+                            <input name="jidlo" type="text" class="edit" value="<?= $selected_family['jidlo'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Telekomunikace:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['telekomunikace'] ?>" data-form-input disabled>
+                            <input name="telekomunikace" type="text" class="edit" value="<?= $selected_family['telekomunikace'] ?>" data-form-input disabled>
                         </div>
                     </div>
                     <!-- Vydaje zbytne -->
                     <div class="clmn">
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Koníčky:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['konicky'] ?>" data-form-input disabled>
+                            <input name="konicky" type="text" class="edit" value="<?= $selected_family['konicky'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Výlet+zábava..:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['vylety'] ?>" data-form-input disabled>
+                            <input name="vylety" type="text" class="edit" value="<?= $selected_family['vylety'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Vzdělání:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['vzdelani'] ?>" data-form-input disabled>
+                            <input name="vzdelani" type="text" class="edit" value="<?= $selected_family['vzdelani'] ?>" data-form-input disabled>
                         </div>
 
                     </div>
@@ -91,19 +91,19 @@ if (isset($_POST['edit_id'])) :
                     <div class="clmn">
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Hypotéka:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['kcelkem'] ?>" data-form-input disabled>
+                            <input name="kcelkem" type="text" class="edit" value="<?= $selected_family['kcelkem'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Splátka hypo:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['ksplatka'] ?>" data-form-input disabled>
+                            <input name="ksplatka" type="text" class="edit" value="<?= $selected_family['ksplatka'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Kreditka:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['hcelkem'] ?>" data-form-input disabled>
+                            <input name="hcelkem" type="text" class="edit" value="<?= $selected_family['hcelkem'] ?>" data-form-input disabled>
                         </div>
                         <div style="display:flex; flex-direction:column;">
                             <label for="name">Splátka kreditky:</label>
-                            <input type="text" class="edit" value="<?= $selected_family['hsplatka'] ?>" data-form-input disabled>
+                            <input name="hsplatka" type="text" class="edit" value="<?= $selected_family['hsplatka'] ?>" data-form-input disabled>
                         </div>
                     </div>
 
