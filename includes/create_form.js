@@ -14,6 +14,14 @@ if (currentStep < 0) {
    currentStep = 0
    showCurrentStep()
 }
+console.log(formSteps[currentStep])
+// popup.addEventListener('click', (e)=> {
+//    console.log(e.target)
+//    console.log(e.target.closest('[data-step]') === formSteps[currentStep] )
+//    if(!(e.target.closest('[data-step]') === formSteps[currentStep] ))  {
+//       popup.classList.remove('show')
+//    }
+// })
 
 
 multiStepForm.addEventListener("click", (e) => {
