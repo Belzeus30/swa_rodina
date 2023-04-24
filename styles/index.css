@@ -54,7 +54,7 @@ body {
     font-size: 1em;
     position: relative;
     background-color: var(--dark-blue);
-    border-radius: .5rem;
+    border-radius: 4rem;
     padding: 1rem;
     width: 8rem;
     border: none;
@@ -68,6 +68,9 @@ body {
   }
   .button:hover {
     background-color: var(--lighter-blue);
+  }
+  .button:active{
+    opacity:0.75;
   }
   .main {
     width: 100%;

@@ -1,3 +1,13 @@
+:root {
+  --light-gray: #A7A7A7;
+  --dark-blue : #0a0a23;
+  --white : #fff;
+  --lighter-gray: #D8D8D8A0;
+  --lighter-blue:#0a0a23B0;
+  --light-blue: aliceblue;
+  --overlay: rgba(60, 60, 60, 0.4);
+
+}
 h1 {
   color: black;
   text-align: center;
@@ -72,6 +82,9 @@ body{
   
 }
 #family-detail {
+  color:inherit;
+}
+.jmeno{
   width: fit-content;
   display: block;
   position: absolute;
@@ -80,8 +93,8 @@ body{
   left: 0;
   right: 0;
   text-align: center;
-  top: 50%;
-  background-color: orange;
+  top: 20%;
+  background-color: var(--light-blue);
 }
 .clmn{
   display:flex;
@@ -97,12 +110,55 @@ body{
   flex-direction: column;
   padding:3rem;
 }
-.edit {
-  background-color: white;
+.edit:disabled{
+  background-color: var(--light-blue);
   height:1.5rem;
   width:10rem;
   border-radius: 2rem;
 }
+.edit {
+  background-color: white;
+  height:1.5rem;
+  width:10rem;
+  margin-bottom:2rem;
+  border-radius: 2rem;
+}
+
 .edit:active{
   opacity: 0.5;
+}
+.edit1:disabled{
+  background-color: var(--light-blue);
+  align-self: center;
+  height:2rem;
+  width:20rem;
+  margin-bottom:2rem;
+  border-radius: 2rem;
+}
+.edit1 {
+  background-color: white;
+  align-self: center;
+  height:2rem;
+  width:20rem;
+  margin-bottom:2rem;
+  border-radius: 2rem;
+}
+.edit1:active{
+  opacity: 0.5;
+}
+.editb{
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border:none;
+  padding:.65rem;
+  text-align: center;
+  border-radius: 1rem;
+  width: 4rem;
+
+}
+.editb:hover{
+  background-color: var(--lighter-blue);
+}
+.editb:active{
+  opacity:0.75;
 }
