@@ -125,7 +125,7 @@
         }
         public function update() {
             $this->Calculate_cahflow();
-            $query = 'INSERT INTO ' . $this->table . ' SET 
+            $query = 'UPDATE ' . $this->table . ' SET 
             name = :name,
             plat_1 = :plat_1,
             plat_2 = :plat_2,
