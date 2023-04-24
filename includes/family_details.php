@@ -31,11 +31,11 @@ if (isset($_POST['edit_id'])):
                 <div class="recommended">
                     <?php if ($selected_family['cashflow'] > (6 * ($selected_family['plat_1'] + $selected_family['plat_2']))): ?>
 
-                        <p>napad na investice </p>
+                        <p>Máš velkou rezervu :) investuj do kapitálových trhů</p>
                     <?php elseif ($selected_family['cashflow'] > 0): ?>
-                        <p>schov si penize </p>
+                        <p>nemáš dost velkou rezervu šetři si peníze</p>
                     <?php else: ?>
-                        <p> else zvedni prijmy a sniz vydaje </p>
+                        <p>Zvedni příjem</p>
                     <?php endif ?>
                 </div>
 
