@@ -22,6 +22,6 @@ $Family->hsplatka = isset($_POST['hsplatka']) ? intval($_POST['hsplatka']) : 0;
 
 $Family->update();
 
-header("Location: ../index.php");
+//header("Location: ../index.php");
 
 ?>
