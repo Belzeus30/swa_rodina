@@ -207,7 +207,7 @@
                             $this->ksplatka * 12 + 
                             $this->hsplatka * 12;
             $this->cashflow = $this->prijmy - $this->vydaje;
-            $this->dluh = ($this->kcelkem - $this->ksplatka * 12) + ($this->hcelkem - $this->hsplatka * 12);
+            $this->dluh = ($this->kcelkem - $this->ksplatka * 12) + ($this->hcelkem - $this->hsplatka * 12)>0?($this->kcelkem - $this->ksplatka * 12) + ($this->hcelkem - $this->hsplatka * 12):0;
         }
 
     }

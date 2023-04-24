@@ -19,7 +19,6 @@ $Family->kcelkem = isset($_POST['kcelkem']) ? intval($_POST['kcelkem']) : 0;
 $Family->ksplatka = isset($_POST['ksplatka']) ? intval($_POST['ksplatka']) : 0;
 $Family->hcelkem = isset($_POST['hcelkem']) ? intval($_POST['hcelkem']) : 0;
 $Family->hsplatka = isset($_POST['hsplatka']) ? intval($_POST['hsplatka']) : 0;
-
 $Family->update();
 
 header("Location: ../index.php");

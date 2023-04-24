@@ -14,6 +14,13 @@
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 1em;
+  background-color: #A7A7A7;
+  margin: 0;
+}
+
+h1 {
+  color: black;
+  text-align: center;
 }
 
 .family-list {
@@ -170,6 +177,8 @@ input::-webkit-inner-spin-button {
 .form-group {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   gap: .25rem;
   width: 80%;
 }
@@ -216,3 +225,106 @@ input::-webkit-inner-spin-button {
     opacity: 0;
   }
 }
+
+
+#family-detail {
+  color:inherit;
+  position: absolute;
+    top: 0rem;
+    width: 100%;
+    background-color: var(--overlay) ;
+    height: 100%;
+    overflow-x: hidden;
+  
+}
+.edit-popup{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 50rem;
+  background-color: var(--light-blue);
+}
+.main-details {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.clmn{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  gap:2rem;
+}
+  
+
+.grid{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding:3rem;
+}
+.edit:disabled{
+  background-color: var(--light-blue);
+  height:1.5rem;
+  width:10rem;
+  border-radius: 2rem;
+}
+.edit {
+  background-color: white;
+  height:1.5rem;
+  width:10rem;
+  margin-bottom:2rem;
+  border-radius: 2rem;
+}
+
+.edit:active{
+  opacity: 0.5;
+}
+.edit1:disabled{
+  background-color: var(--light-blue);
+  align-self: center;
+  height:2rem;
+  width:20rem;
+  margin-bottom:2rem;
+  border-radius: 2rem;
+}
+.edit1 {
+  background-color: white;
+  align-self: center;
+  height:2rem;
+  width:20rem;
+  margin-bottom:2rem;
+  border-radius: 2rem;
+}
+.edit1:active{
+  opacity: 0.5;
+}
+.editb{
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border:none;
+  padding:.65rem;
+  text-align: center;
+  border-radius: 1rem;
+  width: 4rem;
+
+}
+.editb:hover{
+  background-color: var(--lighter-blue);
+}
+.editb:active{
+  opacity:0.75;
+}
+
