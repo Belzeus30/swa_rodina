@@ -96,6 +96,9 @@ body {
   height: 100vh;
 }
 
+p {
+  margin: 0;
+}
   .popup {
     display: none;
     position: absolute;
@@ -230,19 +233,18 @@ input::-webkit-inner-spin-button {
 #family-detail {
   color:inherit;
   position: absolute;
-    top: 0rem;
-    width: 100%;
-    background-color: var(--overlay) ;
-    height: 100%;
-    overflow-x: hidden;
+  top: 0rem;
+  width: 100%;
+  background-color: var(--overlay) ;
+  height: 100%;
+  overflow-x: hidden;
   
 }
 .edit-popup{
-  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
   top: 5rem;
   margin-left: auto;
@@ -250,81 +252,130 @@ input::-webkit-inner-spin-button {
   left: 0;
   right: 0;
   text-align: center;
-  height: 50rem;
+  width: 50rem;
   background-color: var(--light-blue);
+  border-radius: 1rem;
+  box-shadow: 2px 2px 9px 1px var(--dark-blue);
+  animation: appear 250ms ease-in-out;
+}
+.edit-popup h3 {
+  font-size: 2em;
+  margin: 1rem;
+}
+
+.edit-popup .button-group {
+  bottom:  0;
 }
 .main-details {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 5rem;
   align-items: center;
-  justify-content: center;
+  gap: 5rem;
+  justify-content: space-evenly;
+  padding: .5rem 0 .5rem;
+  /* border: 2px solid var(--dark-blue); */
+  border-left: 0;
+  border-right: 0;
 }
 
-.clmn{
-  display:flex;
-  justify-content: center;
-  flex-direction: row;
-  gap:2rem;
-}
-  
-
-.grid{
-  display:flex;
-  justify-content: center;
+.recommended {
+  display: flex;
   flex-direction: column;
-  padding:3rem;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 0 .5rem;
+  width: 60%;
+  border-bottom: 2px solid var(--dark-blue);
 }
-.edit:disabled{
-  background-color: var(--light-blue);
-  height:1.5rem;
-  width:10rem;
-  border-radius: 2rem;
+  .main-content{
+  display:flex;;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding:1rem 3rem 1rem 3rem;
+  gap: .5rem;
+
 }
-.edit {
-  background-color: white;
-  height:1.5rem;
-  width:10rem;
-  margin-bottom:2rem;
-  border-radius: 2rem;
+.family-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; ;
+}
+.main-content label {
+  font-weight: bold;
+}
+.main-content .form-group {
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  border-bottom: 2px solid var(--dark-blue);
+  border-left: 0;
+  border-right: 0;
+  
+}
+.main-content > .section {
+  border-top: 2px solid var(--dark-blue);
+}
+.main-content > .section ~ .section {
+  border-top: none;
+}
+.family-name {
+ display: flex;
+ flex-direction: column; 
 }
 
-.edit:active{
-  opacity: 0.5;
-}
-.edit1:disabled{
-  background-color: var(--light-blue);
-  align-self: center;
-  height:2rem;
-  width:20rem;
-  margin-bottom:2rem;
-  border-radius: 2rem;
-}
-.edit1 {
-  background-color: white;
-  align-self: center;
-  height:2rem;
-  width:20rem;
-  margin-bottom:2rem;
-  border-radius: 2rem;
-}
-.edit1:active{
-  opacity: 0.5;
-}
-.editb{
-  background-color: var(--dark-blue);
-  color: var(--white);
-  border:none;
-  padding:.65rem;
+.family-name input, .family-name label {
+  height: 2rem;
+  font-size: 1.2em;
   text-align: center;
-  border-radius: 1rem;
-  width: 4rem;
 
 }
-.editb:hover{
-  background-color: var(--lighter-blue);
-}
-.editb:active{
-  opacity:0.75;
+
+.main-content input {
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+  width: 70%;
+  padding: 1rem;
+  height: 1.5rem;
+  border-radius: .5rem;
+  border: 1px solid var(--dark-blue);
+  background-color: var(--lighter-gray);
+
 }
 
+.main-content input:disabled {
+  background-color: var(--light-blue);
+  border: none;
+}
+.main-details p {
+  border-bottom: 2px solid var(--dark-blue);
+  padding: .5rem;
+}
+
+
+
+@keyframes appear {
+  0% {
+    transform: scale(.8);
+    opacity: .5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
