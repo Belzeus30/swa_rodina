@@ -10,12 +10,14 @@
   --light-blue: aliceblue;
   --overlay: rgba(60, 60, 60, 0.4);
 }
-
+/* main elements */
 body {
   font-family: 'Rajdhani', sans-serif;
   font-size: 1em;
   background-color: #A7A7A7;
   margin: 0;
+  position: relative;
+  height: 100vh;
 }
 
 h1 {
@@ -23,6 +25,37 @@ h1 {
   text-align: center;
 }
 
+p {
+  margin: 0;
+}
+
+
+.button {
+    
+  font-family: 'Rajdhani', sans-serif ;
+  font-size: 1em;
+  position: relative;
+  background-color: var(--dark-blue);
+  border-radius: 4rem;
+  padding: 1rem;
+  width: 8rem;
+  border: none;
+  margin: 2rem;
+  color: var(--white);
+  left: 0;
+  right: 0;
+  text-align: center  ;
+
+
+}
+.button:hover {
+  background-color: var(--lighter-blue);
+}
+.button:active{
+  opacity:0.75;
+}
+
+/* main page list */
 .family-list {
     background-color: var(--light-blue);
     padding: 1rem;
@@ -55,30 +88,8 @@ h1 {
     width: 5rem;
     color: var(--white);
   }
-  .button {
-    
-    font-family: 'Rajdhani', sans-serif ;
-    font-size: 1em;
-    position: relative;
-    background-color: var(--dark-blue);
-    border-radius: 4rem;
-    padding: 1rem;
-    width: 8rem;
-    border: none;
-    margin: 2rem;
-    color: var(--white);
-    left: 0;
-    right: 0;
-    text-align: center  ;
-  
 
-  }
-  .button:hover {
-    background-color: var(--lighter-blue);
-  }
-  .button:active{
-    opacity:0.75;
-  }
+  
   .main {
     width: 100%;
     display: flex;
@@ -91,14 +102,9 @@ h1 {
     background: var(--lighter-blue);
     color: var(--white);
   }
-body {
-  position: relative;
-  height: 100vh;
-}
 
-p {
-  margin: 0;
-}
+/* create form popup */
+
   .popup {
     display: none;
     position: absolute;
@@ -138,7 +144,7 @@ p {
 }
 .card input {
   width: 100%;
-  border-radius: .5rem;
+  border-radius: 1rem;
   border: 2px solid var(--dark-blue);
   padding: .5rem;
 }
@@ -229,6 +235,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
+/* family detail popup */
 
 #family-detail {
   color:inherit;
@@ -256,7 +263,7 @@ input::-webkit-inner-spin-button {
   background-color: var(--light-blue);
   border-radius: 1rem;
   box-shadow: 2px 2px 9px 1px var(--dark-blue);
-  animation: appear 250ms ease-in-out;
+  animation: fade 250ms ease-in-out reverse;
 }
 .edit-popup h3 {
   font-size: 2em;
@@ -346,21 +353,29 @@ input::-webkit-inner-spin-button {
 
 .main-content input {
   display: flex;
-  box-sizing: border-box;
-  text-align: center;
-  width: 70%;
+  text-align: center; 
+  border-radius: 1rem;
+  border: 2px solid var(--dark-blue);
+  background-color: var(--white);
+  width: calc(70% - 4px);
   padding: 1rem;
-  height: 1.5rem;
-  border-radius: .5rem;
-  border: 1px solid var(--dark-blue);
-  background-color: var(--lighter-gray);
+  height: calc(.5rem - 4px);
+}
 
+.main-content input:focus, .main-content input:hover {
+  background-color: var(--lighter-blue);
+  color: white;
 }
 
 .main-content input:disabled {
   background-color: var(--light-blue);
+  color: black;
   border: none;
+  height: .5rem;
+  width: 70%;
 }
+
+
 .main-details p {
   border-bottom: 2px solid var(--dark-blue);
   padding: .5rem;

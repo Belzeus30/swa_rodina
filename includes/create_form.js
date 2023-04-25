@@ -14,17 +14,15 @@ if (currentStep < 0) {
    currentStep = 0
    showCurrentStep()
 }
-console.log(formSteps[currentStep])
-// popup.addEventListener('click', (e)=> {
-//    console.log(e.target)
-//    console.log(e.target.closest('[data-step]') === formSteps[currentStep] )
-//    if(!(e.target.closest('[data-step]') === formSteps[currentStep] ))  {
-//       popup.classList.remove('show')
-//    }
-// })
-
-
-multiStepForm.addEventListener("click", (e) => {
+popup.addEventListener('click', (e) => {
+   if (!formSteps.some(step => step.contains(e.target))) {
+      console.log(e.target)
+      popup.classList.remove('show')
+      if (currentStep != 0) formSteps[currentStep].classList.add("hide");
+      currentStep = 0
+      multiStepForm.reset()
+      showCurrentStep()
+   }
    let incrementor
    if (e.target.matches("[data-next]")) {
       incrementor = 1;
@@ -32,7 +30,7 @@ multiStepForm.addEventListener("click", (e) => {
       incrementor = -1
    } else if (e.target.matches("[data-popup-close-button]")) {
       popup.classList.remove("show")
-      if(currentStep!=0) formSteps[currentStep].classList.add("hide");
+      if (currentStep != 0) formSteps[currentStep].classList.add("hide");
       currentStep = 0
       multiStepForm.reset()
       showCurrentStep()
@@ -44,7 +42,11 @@ multiStepForm.addEventListener("click", (e) => {
       currentStep += incrementor;
       showCurrentStep()
    }
+
+
 })
+
+
 
 formSteps.forEach(step => {
    step.addEventListener("animationend", (e) => {
@@ -52,6 +54,7 @@ formSteps.forEach(step => {
       formSteps[currentStep].classList.remove("hide")
    })
 })
+
 openButton.addEventListener("click", () => {
    popup.classList.toggle("show")
    formSteps[currentStep].classList.remove("hide")

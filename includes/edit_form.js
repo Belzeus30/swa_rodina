@@ -1,8 +1,11 @@
-const editbutton = document.querySelector('[data-enable-button]')
-const inputs = document.querySelectorAll('[data-form-input]')
-const editform = document.querySelector('[data-edit-form]')
-const editpopup = document.querySelector('[data-edit-popup]')
-const overlay = documet.querySelector('[data-edit-overlay]')
+
+    editbutton = document.querySelector('[data-enable-button]')
+    inputs = document.querySelectorAll('[data-form-input]')
+    editform = document.querySelector('[data-edit-form]')
+    editpopup = document.querySelector('[data-edit-popup]')
+    overlay = document.querySelector('[data-edit-overlay]')
+    closeButtons = document.querySelectorAll('[data-close-edit-button]')
+
 
 
 editbutton.addEventListener("click", () => {
@@ -12,27 +15,22 @@ editbutton.addEventListener("click", () => {
         })
     } else {
         editform.submit()
-        inputs.forEach(input => (
-            input.disabled = true
-        ))
+        // inputs.forEach(input => (
+        //     input.disabled = true
+        // ))
 
     }
     
 
 })
 
-const familyDiv = document.querySelectorAll('[data-family-id]');
+overlay.addEventListener('click', (e)=> {
+    if(!editpopup.contains(e.target)) {
+        overlay.remove()
+    }
+    if(e.target.matches("[data-close-edit-button]")) {
+        overlay.remove()
+    }
+})
+//closeButtons.forEach()
 
-Array.from(familyDiv).forEach(function(e) {
-    e.addEventListener('click', function() {
-        const familyId = this.dataset.familyId; 
-          data = {'edit_id':familyId};
-        $.ajax({
-            url: 'includes/family_details.php', 
-            type: 'POST',
-            data: data,
-            success: (data)=>{
-                $('body').append(data);},
-            error: ()=>{alert("error")}
-        })
-    })})
