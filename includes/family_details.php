@@ -18,7 +18,7 @@
                     <div class="main-content">
                         <div class="family-name">
                             <label for="name">Jméno rodiny</label>
-                            <input name="name" value="<?= $selected_family['name'] ?>" data-form-input disabled>
+                            <input type="text"  name="name" value="<?= $selected_family['name'] ?>" data-form-input type="number" disabled>
                         </div>
 
 
@@ -26,19 +26,19 @@
 
                             <div class="form-group">
                                 <label for="plat">1.plat (měsíčně):</label>
-                                <input name="plat" type="text" value="<?= $selected_family['plat_1'] ?>" data-form-input disabled>
+                                <input type="number" name="plat" type="text" value="<?= $selected_family['plat_1'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="2plat">2.plat (měsíčně):</label>
-                                <input name="2plat" type="text" value="<?= $selected_family['plat_2'] ?>" data-form-input disabled>
+                                <input type="number" name="2plat" type="text" value="<?= $selected_family['plat_2'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="jedno_prijem">Jednorázové přijmy:</label>
-                                <input name="jedno_prijem" type="text" value="<?= $selected_family['jedno_prijem'] ?>" data-form-input disabled>
+                                <input type="number" name="jedno_prijem" type="text" value="<?= $selected_family['jedno_prijem'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="investice">Investice:</label>
-                                <input name="investice" type="text" value="<?= $selected_family['investice'] ?>" data-form-input disabled>
+                                <input type="number" name="investice" type="text" value="<?= $selected_family['investice'] ?>" data-form-input type="number" disabled>
                             </div>
                         </div>
                         <!-- Vydaje -->
@@ -47,34 +47,34 @@
 
                             <div class="form-group">
                                 <label for="najem">Nájem/Daň(měsíčně):</label>
-                                <input name="najem" type="text" value="<?= $selected_family['najem'] ?>" data-form-input disabled>
+                                <input type="number" name="najem" type="text" value="<?= $selected_family['najem'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="inkaso">Voda+Elektřina(za měsíc):</label>
-                                <input name="inkaso" type="text" value="<?= $selected_family['inkaso'] ?>" data-form-input disabled>
+                                <input type="number" name="inkaso" type="text" value="<?= $selected_family['inkaso'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="jidlo">Jídlo:</label>
-                                <input name="jidlo" type="text" value="<?= $selected_family['jidlo'] ?>" data-form-input disabled>
+                                <input type="number" name="jidlo" type="text" value="<?= $selected_family['jidlo'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="telekomunikace">Telekomunikace:</label>
-                                <input name="telekomunikace" type="text" value="<?= $selected_family['telekomunikace'] ?>" data-form-input disabled>
+                                <input type="number" name="telekomunikace" type="text" value="<?= $selected_family['telekomunikace'] ?>" data-form-input type="number" disabled>
                             </div>
                         </div>
                         <!-- Vydaje zbytne -->
                         <div class="section">
                             <div class="form-group">
                                 <label for="konicky">Koníčky:</label>
-                                <input name="konicky" type="text" value="<?= $selected_family['konicky'] ?>" data-form-input disabled>
+                                <input type="number" name="konicky" type="text" value="<?= $selected_family['konicky'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="vylety">Výlet+zábava..:</label>
-                                <input name="vylety" type="text" value="<?= $selected_family['vylety'] ?>" data-form-input disabled>
+                                <input type="number" name="vylety" type="text" value="<?= $selected_family['vylety'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="vzdelani">Vzdělání:</label>
-                                <input name="vzdelani" type="text" value="<?= $selected_family['vzdelani'] ?>" data-form-input disabled>
+                                <input type="number" name="vzdelani" type="text" value="<?= $selected_family['vzdelani'] ?>" data-form-input type="number" disabled>
                             </div>
 
                         </div>
@@ -83,19 +83,19 @@
 
                             <div class="form-group">
                                 <label for="kcelkem">Hypotéka:</label>
-                                <input name="kcelkem" type="text" value="<?= $selected_family['kcelkem'] ?>" data-form-input disabled>
+                                <input type="number" name="kcelkem" type="text" value="<?= $selected_family['kcelkem'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="ksplatka">Splátka hypo:</label>
-                                <input name="ksplatka" type="text" value="<?= $selected_family['ksplatka'] ?>" data-form-input disabled>
+                                <input type="number" name="ksplatka" type="text" value="<?= $selected_family['ksplatka'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="hcelkem">Kreditka:</label>
-                                <input name="hcelkem" type="text" value="<?= $selected_family['hcelkem'] ?>" data-form-input disabled>
+                                <input type="number" name="hcelkem" type="text" value="<?= $selected_family['hcelkem'] ?>" data-form-input type="number" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="hsplatkay">Splátka kreditky:</label>
-                                <input name="hsplatka" type="text" value="<?= $selected_family['hsplatka'] ?>" data-form-input disabled>
+                                <input type="number" name="hsplatka" type="text" value="<?= $selected_family['hsplatka'] ?>" data-form-input type="number" disabled>
                             </div>
                         </div>
 
